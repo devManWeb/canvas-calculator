@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<canvas id="screen_canvas" width="600" height="100" style="border:1px solid #000000;">
+</canvas>
+<div id="calcolatrice">
+	<div id="service_keys">
+        <button onclick="calculator.backspace()">Bck</button>
+        <button onclick="calculator.clear_entry()">CE</button>
+        <button onclick="calculator.clear_calculator()">C</button>
+    </div>
+    <div id="numeric_keys">
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+		<button>+/-</button>
+		<button>.</button>
+        <button>0</button>
+        <button>1</button>
+    </div>
+    <div id="operation_keys">
+        <button onclick="calculator.add()">+</button>
+        <button onclick="calculator.subtract()">-</button>
+        <button onclick="calculator.multiply()">x</button>
+        <button onclick="calculator.divide()">/</button>
+        <button id="equal_button" onclick="calculator.result()">=</button>
+    </div>
+</div>
+<script src="sounds.js"></script>
+<script src="canvas.js"></script>
+<script src="keys_and_memory.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
