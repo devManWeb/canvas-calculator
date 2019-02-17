@@ -1,9 +1,9 @@
-#calcolatrice {
+#calculator {
     margin-top:10px;
     margin-left:3px;
     background-color:red;
 }
-#calcolatrice div{
+#calculator div{
     float:left;
 }
 #service_keys{

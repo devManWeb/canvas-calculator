@@ -14,7 +14,7 @@ function closure_canvas(){
 			ctx.fillStyle = "#cbddbe";
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 			//draw the dots
-			for(var i=0;i<9;i++){
+			for(var i=0;i<10;i++){
 				ctx.fillStyle = "#c4c4c4";
 				ctx.fillRect(x_dot_pos + (x_dot_pos * i) - 3,y_dot_pos,5,5);
 			}
@@ -36,7 +36,7 @@ function closure_canvas(){
 
 		screen_drawer(desired_symbol,index){
 			ctx.fillStyle = "black";
-			var pos_x = (9 - index) *x_dot_pos ;
+			let pos_x = (9 - index) *x_dot_pos ;
 			switch(desired_symbol) {
 				case "0":
 					//left
@@ -110,9 +110,6 @@ function closure_canvas(){
 					ctx.fillRect(12+pos_x,48,36,5);
 					ctx.fillRect(12+pos_x,90,36,5);
 				break;
-				case ".":
-					ctx.fillRect(pos_x - 3,y_dot_pos,5,5); //here there is another -1 
-				break;
 				case "-":
 					ctx.fillRect(12+pos_x,48,36,5);
 				break;
@@ -124,6 +121,11 @@ function closure_canvas(){
 					ctx.fillRect(12+pos_x,90,36,5);
 				break;
 			}
+		},
+		float_number(index){
+			ctx.fillStyle = "black";
+			let pos_x = (11 - index) *x_dot_pos ;
+			ctx.fillRect(pos_x - 3,y_dot_pos,5,5); //here there is another -1
 		}
 
 	}
