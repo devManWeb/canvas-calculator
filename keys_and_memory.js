@@ -55,18 +55,22 @@ function closure_keys_memory(){
         },
         result(){
             try{
+                console.log("current: "+ current_string);
+                console.log("memory: "+ memory_string);
                 if(memory_string == ""){ //if we had just started typing
                     memory_string = current_string;
             		current_string = "";
                     this.only_display(memory_string);
                 } else if(memory_string != 0){
                     memory_string = last_operation();
-            		current_string = "";
-                    this.only_display(memory_string);
-                } else if(memory_string.length > 10){
-                    current_string = "";
-                    memory_string = "";
-                    this.only_display("E");
+                    if(memory_string.length > 10){ //if the number can't be contained in the canvas
+                       current_string = "";
+                       memory_string = "";
+                       this.only_display("E")
+                   } else {
+                        current_string = "";
+                        this.only_display(memory_string);
+                    }
                 }
             } catch(e){ //display an "E" if we have an invalid operation
                 current_string = "";
