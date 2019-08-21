@@ -55,8 +55,6 @@ function closure_keys_memory(){
         },
         result(){
             try{
-                console.log("current: "+ current_string);
-                console.log("memory: "+ memory_string);
                 if(memory_string == ""){ //if we had just started typing
                     memory_string = current_string;
             		current_string = "";
